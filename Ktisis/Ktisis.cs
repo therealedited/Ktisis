@@ -58,6 +58,7 @@ namespace Ktisis {
 			Interop.Hooks.EventsHooks.Init();
 			Interop.Hooks.GuiHooks.Init();
 			Interop.Hooks.PoseHooks.Init();
+			Interop.Hooks.WindowHooks.Init();
 
 			EventManager.OnGPoseChange += Workspace.OnEnterGposeToggle; // must be placed before ActorStateWatcher.Init()
 
@@ -95,6 +96,7 @@ namespace Ktisis {
 			Interop.Hooks.EventsHooks.Dispose();
 			Interop.Hooks.GuiHooks.Dispose();
 			Interop.Hooks.PoseHooks.Dispose();
+			Interop.Hooks.WindowHooks.Dispose();
 
 			Interop.Alloc.Dispose();
 			ActorStateWatcher.Instance.Dispose();
